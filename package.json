@@ -1,0 +1,23 @@
+{
+  "name": "js-dev-env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plizano-jccm/js-dev-env.git"
+  },
+  "author": "PLM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plizano-jccm/js-dev-env/issues"
+  },
+  "homepage": "https://github.com/plizano-jccm/js-dev-env#readme",
+  "devDependencies": {
+    "express": "^4.18.2",
+    "open": "^8.4.0"
+  }
+}
