@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "node buildScripts/startMessage.js",
-    "start": "node buildScripts/srcServer.js",
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "babel-node buildScripts/srcServer.js",
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel start localtunnel"
   },
@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/plizano-jccm/js-dev-env#readme",
   "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.3",
+    "@babel/register": "^7.18.9",
+    "babel-loader": "^8.2.5",
     "chalk": "^4.1.0",
     "express": "^4.18.2",
     "npm-run-all": "^4.1.5",
