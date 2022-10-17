@@ -1,4 +1,5 @@
 import path from "path";
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 export default {
   mode: "development", // Indicamos que es para desarrollo.
@@ -9,7 +10,14 @@ export default {
     publicPath: "/",
     filename: "bundle.js",
   },
-  plugins: [], // No necesario por ahora
+  plugins: [
+
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+    })
+
+  ], // No necesario por ahora
   module: { // Cómo manejar diferentes tipos de ficheros
     rules: [
       { test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"] },
